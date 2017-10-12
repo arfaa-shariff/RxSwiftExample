@@ -11,6 +11,7 @@
 		3FEE0387B1AF796358E435CE /* Pods_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E277401BB67F8C4ACDBE1B /* Pods_Rx.framework */; };
 		77EECAD3FDC9142D10F7B763 /* Pods_RxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35082F46978D697E42AC6BF /* Pods_RxUITests.framework */; };
 		FB08B4DD1F8F690200D9167A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08B4DB1F8F690200D9167A /* ViewController.swift */; };
+		FB08B4E91F8F967300D9167A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08B4E81F8F967300D9167A /* SearchViewController.swift */; };
 		FB831AD11F8CC0A00065E532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB831AD01F8CC0A00065E532 /* AppDelegate.swift */; };
 		FB831AD61F8CC0A00065E532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB831AD41F8CC0A00065E532 /* Main.storyboard */; };
 		FB831AD81F8CC0A00065E532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB831AD71F8CC0A00065E532 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		E3948BDB1FE045A674E68EF0 /* Pods-Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx/Pods-Rx.release.xcconfig"; sourceTree = "<group>"; };
 		E43FE850FB2AB71B616D1E61 /* Pods-Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rx/Pods-Rx.debug.xcconfig"; sourceTree = "<group>"; };
 		FB08B4DB1F8F690200D9167A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
+		FB08B4E81F8F967300D9167A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Controller/SearchViewController.swift; sourceTree = "<group>"; };
 		FB831ACD1F8CC0A00065E532 /* Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB831AD01F8CC0A00065E532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB831AD51F8CC0A00065E532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FB08B4DB1F8F690200D9167A /* ViewController.swift */,
+				FB08B4E81F8F967300D9167A /* SearchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB08B4E91F8F967300D9167A /* SearchViewController.swift in Sources */,
 				FB08B4DD1F8F690200D9167A /* ViewController.swift in Sources */,
 				FB831AD11F8CC0A00065E532 /* AppDelegate.swift in Sources */,
 			);

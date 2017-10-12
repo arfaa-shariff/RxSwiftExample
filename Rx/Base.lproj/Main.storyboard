@@ -52,19 +52,19 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="JU8-kN-hnt" id="Rgu-Fj-nc9"/>
-                        <outlet property="firstTextField" destination="j13-cQ-eMw" id="dwm-sL-shb"/>
                         <outlet property="label" destination="d2W-VC-Lbu" id="TXW-E6-w2N"/>
-                        <outlet property="secondTextField" destination="jpU-hl-HpJ" id="GIC-3y-5JJ"/>
+                        <outletCollection property="formFields" destination="j13-cQ-eMw" collectionClass="NSMutableArray" id="pNk-2g-jHs"/>
+                        <outletCollection property="formFields" destination="jpU-hl-HpJ" collectionClass="NSMutableArray" id="huH-cG-RTA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--Issue ListUI View Controller-->
+        <!--Search View Conroller-->
         <scene sceneID="KW0-zW-hVx">
             <objects>
-                <viewController id="NIP-Yf-yxF" customClass="IssueListUIViewController" customModule="Rx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NIP-Yf-yxF" customClass="SearchViewConroller" customModule="Rx" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jCo-eZ-NPH"/>
                         <viewControllerLayoutGuide type="bottom" id="SnA-5g-JUH"/>
@@ -83,7 +83,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="issueCell" id="Xth-1l-l9J">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityPrototypeCell" id="Xth-1l-l9J">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xth-1l-l9J" id="R5F-JB-1t5">
@@ -97,8 +97,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="0uW-KA-3RM" id="3O5-ew-9AR"/>
-                        <outlet property="table" destination="nys-is-7fk" id="aXa-RX-VEM"/>
+                        <outlet property="searchBar" destination="0uW-KA-3RM" id="NHi-tc-Yzp"/>
+                        <outlet property="tableView" destination="nys-is-7fk" id="EsU-6E-6Jf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L44-mr-oUR" userLabel="First Responder" sceneMemberID="firstResponder"/>

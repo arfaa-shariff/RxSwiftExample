@@ -15,8 +15,7 @@ class ViewController: UIViewController {
     
     let bag = DisposeBag()
     
-    @IBOutlet weak var firstTextField: UITextField!
-    @IBOutlet weak var secondTextField: UITextField!
+    @IBOutlet var formFields: [UITextField]!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var label: UILabel!
     
@@ -31,10 +30,18 @@ class ViewController: UIViewController {
         
     }
     func displayTextfieldValueInLabel(){
-        firstTextField.rx.text.map{
-            "Hello \($0!)"
-            }.bind(to: label.rx.text)
-        
+        //multiple textfields
+        let valid = formFields.map{ input in
+            input.rx.text.map{
+                "Hello \($0!)"
+                }.bind(to: label.rx.text)
+            
+        }
+        //one textfield
+        //        textfield.rx.text.map{
+        //            "Hello \($0!)"
+        //            }.bind(to: label.rx.text)
+        //
     }
     func buttonAction(){
         button.rx.tap.subscribe{ event in
