@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxGesture
 
 class ViewController: UIViewController {
     
@@ -19,9 +20,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var label: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         displayTextfieldValueInLabel()
+        buttonAction()
+        tapGestureForLabel()
         // Do any additional setup after loading the view, typically from a nib.
         
         
@@ -30,6 +34,37 @@ class ViewController: UIViewController {
         firstTextField.rx.text.map{
             "Hello \($0!)"
             }.bind(to: label.rx.text)
+        
+    }
+    func buttonAction(){
+        button.rx.tap.subscribe{ event in
+            switch event{
+            case .next(let value):
+                print("Button Value", value)
+                
+            case .error(let error):
+                print(error)
+                
+            case .completed:
+                print("completed")
+            }
+            
+            }.addDisposableTo(bag)
+    }
+    
+    func tapGestureForLabel(){
+        label.rx.tapGesture().subscribe{event in
+            switch event{
+            case .next(let value):
+                print("Label tap Value", value)
+                
+            case .error(let error):
+                print(error)
+                
+            case .completed:
+                print("completed")
+            }
+        }
         
     }
     func sequence(){

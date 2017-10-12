@@ -10,8 +10,8 @@
 		36E962D6308F78E87E2D6FA2 /* Pods_RxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DCBE31FC83BC945E78834D /* Pods_RxTests.framework */; };
 		3FEE0387B1AF796358E435CE /* Pods_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E277401BB67F8C4ACDBE1B /* Pods_Rx.framework */; };
 		77EECAD3FDC9142D10F7B763 /* Pods_RxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35082F46978D697E42AC6BF /* Pods_RxUITests.framework */; };
+		FB08B4DD1F8F690200D9167A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08B4DB1F8F690200D9167A /* ViewController.swift */; };
 		FB831AD11F8CC0A00065E532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB831AD01F8CC0A00065E532 /* AppDelegate.swift */; };
-		FB831AD31F8CC0A00065E532 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB831AD21F8CC0A00065E532 /* ViewController.swift */; };
 		FB831AD61F8CC0A00065E532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB831AD41F8CC0A00065E532 /* Main.storyboard */; };
 		FB831AD81F8CC0A00065E532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB831AD71F8CC0A00065E532 /* Assets.xcassets */; };
 		FB831ADB1F8CC0A00065E532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB831AD91F8CC0A00065E532 /* LaunchScreen.storyboard */; };
@@ -46,9 +46,9 @@
 		A35082F46978D697E42AC6BF /* Pods_RxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3948BDB1FE045A674E68EF0 /* Pods-Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx/Pods-Rx.release.xcconfig"; sourceTree = "<group>"; };
 		E43FE850FB2AB71B616D1E61 /* Pods-Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rx/Pods-Rx.debug.xcconfig"; sourceTree = "<group>"; };
+		FB08B4DB1F8F690200D9167A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
 		FB831ACD1F8CC0A00065E532 /* Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB831AD01F8CC0A00065E532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB831AD21F8CC0A00065E532 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB831AD51F8CC0A00065E532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB831AD71F8CC0A00065E532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB831ADA1F8CC0A00065E532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,6 +112,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FB08B4D91F8F68F300D9167A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FB08B4DB1F8F690200D9167A /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FB08B4DE1F8F690C00D9167A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		FB08B4E11F8F735900D9167A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		FB831AC41F8CC0A00065E532 = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +159,10 @@
 		FB831ACF1F8CC0A00065E532 /* Rx */ = {
 			isa = PBXGroup;
 			children = (
+				FB08B4E11F8F735900D9167A /* Model */,
+				FB08B4DE1F8F690C00D9167A /* Network */,
+				FB08B4D91F8F68F300D9167A /* Controller */,
 				FB831AD01F8CC0A00065E532 /* AppDelegate.swift */,
-				FB831AD21F8CC0A00065E532 /* ViewController.swift */,
 				FB831AD41F8CC0A00065E532 /* Main.storyboard */,
 				FB831AD71F8CC0A00065E532 /* Assets.xcassets */,
 				FB831AD91F8CC0A00065E532 /* LaunchScreen.storyboard */,
@@ -410,12 +434,24 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rx/Pods-Rx-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB831AD31F8CC0A00065E532 /* ViewController.swift in Sources */,
+				FB08B4DD1F8F690200D9167A /* ViewController.swift in Sources */,
 				FB831AD11F8CC0A00065E532 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -723,6 +759,7 @@
 				FB831AF71F8CC0A00065E532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB831AF81F8CC0A00065E532 /* Build configuration list for PBXNativeTarget "RxTests" */ = {
 			isa = XCConfigurationList;
@@ -731,6 +768,7 @@
 				FB831AFA1F8CC0A00065E532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB831AFB1F8CC0A00065E532 /* Build configuration list for PBXNativeTarget "RxUITests" */ = {
 			isa = XCConfigurationList;
@@ -739,6 +777,7 @@
 				FB831AFD1F8CC0A00065E532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

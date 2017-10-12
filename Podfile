@@ -7,6 +7,9 @@ target 'Rx' do
 
    pod 'RxSwift',    '~> 3.0'
    pod 'RxCocoa',    '~> 3.0'
+   pod "RxGesture"
+   pod 'Moya-ObjectMapper/RxSwift',    '~> 2.3.2’
+   pod 'Moya', '8.0.5'
 
   target 'RxTests' do
     inherit! :search_paths
