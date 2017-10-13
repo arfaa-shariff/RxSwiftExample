@@ -17,9 +17,10 @@ class SignInViewController: UIViewController{
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var usernameTextfield: UITextField!
     
+    var viewModel = SignInViewModel()
     @IBOutlet weak var signInButton: UIButton!
     override func viewDidLoad() {
-        setUpRx()
+        setUpRxViewModel()
     }
     
     func setUpRx(){
@@ -52,5 +53,12 @@ class SignInViewController: UIViewController{
             }
             
         }
+    }
+    
+    func setUpRxViewModel(){
+        usernameTextfield.rx.text.orEmpty.bind(to:viewModel.usernameText).addDisposableTo(disposeBag)
+        passwordTextfield.rx.text.orEmpty.bind(to:viewModel.passwordText).addDisposableTo(disposeBag)
+        viewModel.userNameValid.bind(to: passwordTextfield.rx.isEnabled).addDisposableTo(disposeBag)
+        viewModel.everythingValid.bind(to: signInButton.rx.isEnabled).addDisposableTo(disposeBag)
     }
 }
