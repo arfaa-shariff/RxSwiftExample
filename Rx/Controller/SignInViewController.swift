@@ -17,29 +17,32 @@ class SignInViewController: UIViewController{
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var usernameTextfield: UITextField!
     
-    var viewModel = SignInViewModel()
+    private var viewModel : SignInViewModel!
     @IBOutlet weak var signInButton: UIButton!
     override func viewDidLoad() {
         setUpRxViewModel()
+
     }
     
-    func setUpRx(){
-        let userNameValid = usernameTextfield.rx.text.map{
-            ($0?.characters.count)! >= 5
-        }
+    func setUpRxViewModel(){
+        self.viewModel = SignInViewModel(username: self.usernameTextfield.rx.text.orEmpty.asObservable(),
+                                                password: self.passwordTextfield.rx.text.orEmpty.asObservable(),
+                                                loginTap: self.signInButton.rx.tap.asObservable())
         
-        let passwordValid = passwordTextfield.rx.text.map({
-            ($0?.characters.count)! >= 5
-        })
+        self.viewModel.loginEnabled.bindNext{ valid  in
+            self.signInButton.isEnabled = valid
+//            self.signInButton.alpha = valid ? 1 : 0.5
+            }.addDisposableTo(disposeBag)
         
-        let everythingValid = Observable.combineLatest(userNameValid, passwordValid){$0 && $1}
+        self.viewModel.loginObservable.bindNext{ input in
+            // TODO: - add logic for login
+            print("Login Clicked")
+            }.addDisposableTo(disposeBag)
+
         
-        userNameValid.bind(to: passwordTextfield.rx.isEnabled).addDisposableTo(disposeBag)
-        
-        everythingValid.bind(to: signInButton.rx.isEnabled).addDisposableTo(disposeBag)
-        
-        
-        
+    }
+    
+    func onClickSignInButton(){
         signInButton.rx.tap.subscribe{event in
             switch event{
             case .next(let value):
@@ -53,12 +56,6 @@ class SignInViewController: UIViewController{
             }
             
         }
-    }
-    
-    func setUpRxViewModel(){
-        usernameTextfield.rx.text.orEmpty.bind(to:viewModel.usernameText).addDisposableTo(disposeBag)
-        passwordTextfield.rx.text.orEmpty.bind(to:viewModel.passwordText).addDisposableTo(disposeBag)
-        viewModel.userNameValid.bind(to: passwordTextfield.rx.isEnabled).addDisposableTo(disposeBag)
-        viewModel.everythingValid.bind(to: signInButton.rx.isEnabled).addDisposableTo(disposeBag)
+
     }
 }

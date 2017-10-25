@@ -14,12 +14,18 @@
 		FB08B4E91F8F967300D9167A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08B4E81F8F967300D9167A /* SearchViewController.swift */; };
 		FB0D8CD11F90898900BE80BD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0D8CD01F90898900BE80BD /* SignInViewController.swift */; };
 		FB0D8CE31F90C8DF00BE80BD /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0D8CE21F90C8DF00BE80BD /* SignInViewModel.swift */; };
+		FB3B4F251F9F056600851A94 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3B4F241F9F056600851A94 /* RestService.swift */; };
+		FB6951851F94A5B8007C5248 /* MoyaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6951841F94A5B8007C5248 /* MoyaRequest.swift */; };
+		FB6951871F94A5D0007C5248 /* MoyaRestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6951861F94A5D0007C5248 /* MoyaRestApi.swift */; };
+		FB6951891F94A656007C5248 /* CustomServerTrustPolicyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6951881F94A656007C5248 /* CustomServerTrustPolicyManager.swift */; };
+		FB69518B1F94A675007C5248 /* TokenSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB69518A1F94A675007C5248 /* TokenSource.swift */; };
 		FB831AD11F8CC0A00065E532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB831AD01F8CC0A00065E532 /* AppDelegate.swift */; };
 		FB831AD61F8CC0A00065E532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB831AD41F8CC0A00065E532 /* Main.storyboard */; };
 		FB831AD81F8CC0A00065E532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB831AD71F8CC0A00065E532 /* Assets.xcassets */; };
 		FB831ADB1F8CC0A00065E532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB831AD91F8CC0A00065E532 /* LaunchScreen.storyboard */; };
 		FB831AE61F8CC0A00065E532 /* RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB831AE51F8CC0A00065E532 /* RxTests.swift */; };
 		FB831AF11F8CC0A00065E532 /* RxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB831AF01F8CC0A00065E532 /* RxUITests.swift */; };
+		FBFA84EB1F95E77100ABFE52 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFA84EA1F95E77100ABFE52 /* Creator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,11 @@
 		FB08B4E81F8F967300D9167A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Controller/SearchViewController.swift; sourceTree = "<group>"; };
 		FB0D8CD01F90898900BE80BD /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = Controller/SignInViewController.swift; sourceTree = "<group>"; };
 		FB0D8CE21F90C8DF00BE80BD /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewModel.swift; path = ViewModel/SignInViewModel.swift; sourceTree = "<group>"; };
+		FB3B4F241F9F056600851A94 /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestService.swift; path = Network/RestService.swift; sourceTree = "<group>"; };
+		FB6951841F94A5B8007C5248 /* MoyaRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoyaRequest.swift; path = Network/MoyaRequest.swift; sourceTree = "<group>"; };
+		FB6951861F94A5D0007C5248 /* MoyaRestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoyaRestApi.swift; path = Network/MoyaRestApi.swift; sourceTree = "<group>"; };
+		FB6951881F94A656007C5248 /* CustomServerTrustPolicyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomServerTrustPolicyManager.swift; path = Network/CustomServerTrustPolicyManager.swift; sourceTree = "<group>"; };
+		FB69518A1F94A675007C5248 /* TokenSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokenSource.swift; path = Network/TokenSource.swift; sourceTree = "<group>"; };
 		FB831ACD1F8CC0A00065E532 /* Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB831AD01F8CC0A00065E532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB831AD51F8CC0A00065E532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +76,7 @@
 		FB831AEC1F8CC0A00065E532 /* RxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB831AF01F8CC0A00065E532 /* RxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxUITests.swift; sourceTree = "<group>"; };
 		FB831AF21F8CC0A00065E532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBFA84EA1F95E77100ABFE52 /* Creator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Creator.swift; path = Model/Creator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +143,11 @@
 		FB08B4DE1F8F690C00D9167A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FB6951841F94A5B8007C5248 /* MoyaRequest.swift */,
+				FB6951861F94A5D0007C5248 /* MoyaRestApi.swift */,
+				FB6951881F94A656007C5248 /* CustomServerTrustPolicyManager.swift */,
+				FB69518A1F94A675007C5248 /* TokenSource.swift */,
+				FB3B4F241F9F056600851A94 /* RestService.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -138,6 +155,7 @@
 		FB08B4E11F8F735900D9167A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FBFA84EA1F95E77100ABFE52 /* Creator.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -175,6 +193,7 @@
 		FB831ACF1F8CC0A00065E532 /* Rx */ = {
 			isa = PBXGroup;
 			children = (
+				FBFA84E81F95CFF600ABFE52 /* Service */,
 				FB0D8CE11F90C89200BE80BD /* ViewModel */,
 				FB08B4E11F8F735900D9167A /* Model */,
 				FB08B4DE1F8F690C00D9167A /* Network */,
@@ -204,6 +223,13 @@
 				FB831AF21F8CC0A00065E532 /* Info.plist */,
 			);
 			path = RxUITests;
+			sourceTree = "<group>";
+		};
+		FBFA84E81F95CFF600ABFE52 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,9 +543,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB0D8CD11F90898900BE80BD /* SignInViewController.swift in Sources */,
+				FB6951871F94A5D0007C5248 /* MoyaRestApi.swift in Sources */,
+				FBFA84EB1F95E77100ABFE52 /* Creator.swift in Sources */,
+				FB6951851F94A5B8007C5248 /* MoyaRequest.swift in Sources */,
 				FB08B4E91F8F967300D9167A /* SearchViewController.swift in Sources */,
 				FB08B4DD1F8F690200D9167A /* ViewController.swift in Sources */,
+				FB69518B1F94A675007C5248 /* TokenSource.swift in Sources */,
 				FB831AD11F8CC0A00065E532 /* AppDelegate.swift in Sources */,
+				FB6951891F94A656007C5248 /* CustomServerTrustPolicyManager.swift in Sources */,
+				FB3B4F251F9F056600851A94 /* RestService.swift in Sources */,
 				FB0D8CE31F90C8DF00BE80BD /* SignInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
